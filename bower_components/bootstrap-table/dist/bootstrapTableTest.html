@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrapTableTest</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-table.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap-table.min.js"></script>
+</head>
+<body>
+    <table id="superTable">
+        <thead>
+            <tr>
+                <th data-field="id">id</th>
+                <th data-field="name">姓名</th>
+                <th data-field="price">价格</th>
+                <th data-field="createtime">添加时间</th>
+            </tr>
+            <tr>
+              <div>
+                <table id="subTable'">
+                    <tr>
+                        <th data-field="id"></th>
+                        <th data-field="name"></th>
+                        <th data-field="price"></th>
+                        <th data-field="createtime"></th>
+                    </tr>
+                </table>
+              </div>
+            </tr>
+        </thead>
+    </table>
+    <script>
+        $(function(){
+            $("#superTable").bootstrapTable({
+                url:'data.json'
+            });
+        });
+    </script>
+</body>
+</html>
