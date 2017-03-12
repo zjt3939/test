@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrapTableTest</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-table.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap-table.min.js"></script>
+</head>
+<body>
+        <table id="table"
+               data-detail-view="true">
+            </thead>
+        </table>
+    </div>
+<script>
+    var datas = [{
+        hidden:'隐藏数据',
+        id:'33',
+        status:'可操作'
+    }];
+    $(function(){
+        $('#table').bootstrapTable({
+            columns:[
+                {
+                    field:'hidden',
+                    title:'隐藏数据',
+                    visible:false
+                },{
+                    field:'id',
+                    title:'名称',
+                },{
+                    field:'status',
+                    title:'状态'
+                }
+            ],
+            data:datas
+        });
+    });
+</script>
+</body>
+</html>
+<extend name="Managment/list" />
+<block name="header">
+    <!-- <link href="__PUBLIC__/simpleboot/layui/css/layui.css" rel="stylesheet"> -->
+    <title>{:L('NOTICE_MANAGE')}-{:L('ADMIN_CENTER')}</title>
+    <style>
+        .nav_fun { height: 30px; }
+
+        .btn_primary { font-family: "Microsoft YaHei", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti; padding: 4px 14px 4px; background-color: #2196f3; color: #fff; border-radius: 4px; cursor: pointer; border: 1px solid #238de2; }
+
+            .btn_primary:hover { background-color: #41a3f1; }
+
+        .nav_fun > li { width: auto; float: left; }
+
+        .nav > li > a:hover, .nav > li > a:focus { text-decoration: none; color: #fff; background-color: #41a3f1; }
+        .layui-btn-normal { background-color: #2196f3; }
+    </style>
+</block>
+<block name="btn">
+    <button class="layui-btn layui-btn-small layui-btn-normal btn-small js-ajax-submit" type="submit">{:L('SORT')}</button>
+    <button class="layui-btn layui-btn-normal layui-btn-small" onclick="showDetailForm();">{:L('ADD_COMMUNITY_UNIT_ROOM')}</button>
+</block>
+<block name="body">
+    <!--    <div class="wrap js-check-wrap"> <-->
+    <!--  <ul class="nav nav-tabs">
+              <li class="active"><a href="{:U('Communitymanage/index')}">{:L('COMMUNITY_LIST')}</a></li>
+               <li class="active">{:L('COMMUNITY_LIST')}</li>
+          </ul>
+
+       <ul class="nav nav_fun">
+              <li>
+                  <a href="{:U('Communitymanage/add')}" class="layui-btn layui-btn-small layui-btn-normal">{:L('ADD_COMMUNITY_UNIT_ROOM')}</a>
+              </li>
+          </ul> -->
+    <!-- <div class="warp-content">  -->
+        <table class="table table-hover table-bordered table-list" id="table">
+            <!-- <thead>
+                <tr>
+                    <th>{:L('SORT')}</th>
+                    <th>{:L('UNIT')}</th>
+                    <th>{:L('STATUS')}</th>
+                    <th>{:L('ACTIONS')}</th>
+                </tr>
+            </thead>
+            <tbody>
+             {$categories}
+             <foreach name="boostrapTable" item="bo">
+             	<tr>
+             		<th>{$bo.sort}</th>
+	             	<th>{$bo.unit}</th>
+	             	<th>{$bo.status}</th>
+	             	<th>{$bo.control}</th>
+	             </tr>
+	         </foreach>
+	         
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>{:L('SORT')}</th>
+                    <th>{:L('UNIT')}</th>
+                    <th>{:L('STATUS')}</th>
+                    <th>{:L('ACTIONS')}</th>
+                </tr>
+            </tfoot> -->
+        </table>
+    <!--         </div>
+        </div> -->
+</block>
+<block name="script">
+    <!-- <script src="__PUBLIC__/simpleboot/layui/layui.js"></script> -->
+    <script>
+      $(document).ready(function () {
+            Wind.css('treeTable');
+            Wind.use('treeTable', function () {
+                $("#units-table").treeTable({
+                    indent: 20,
+                    //                     expandable: true
+                });
+            });
+
+        });
+      /* bootstrapTable获取数据 */
+    	
+      var $table = $('#table');
+      $(function(){
+    	  buildTable($table);
+      });
+      function expandTable($detail,Odata,superData){
+    	  buildTable($detail.html('<table></table>').find('table'),Odata,superData)
+      }
+      
+      
+      function buildTable($el,Odata=false,superData=false){
+    	  var loginType ={$loginType};
+    	  var columns = [];
+    	  if(loginType==1){
+    		  if(superData===false){
+    			  Odata = null,
+        		  columns = [	{
+     								field:'deep',
+     								title:'深度',
+     								visible:false
+        		  				},
+        		             	{
+        		             		field:'id',
+        		             		title:'小区id',
+        		             		sortable:true
+        		             	},
+        		             	{
+        		             		field:'name',
+        		             		title:'小区名称',
+        		             	},
+        		             	{
+        		             		field:'status',
+        		             		title:'状态',
+        		             	},
+								{
+        		             		field:'action',
+        		             		title:'操作'
+								}
+        		             	
+        		            ];
+        	  }else{
+        		  columns = superData;
+        	  }
+    	  }else if(loginType==2){
+    		  if(superData===false){
+    			  Odata = null,
+    			  columns = [	{
+									field:'deep',
+									title:'深度',
+									visible:false
+	  							},
+	     		             	{
+	     		             		field:'id',
+	     		             		title:'单元id',
+	     		             		sortable:true
+	     		             	},
+	     		             	{
+	     		             		field:'name',
+	     		             		title:'单元名称',
+	     		             	},
+	     		             	{
+	     		             		field:'status',
+	     		             		title:'状态',
+	     		             	},
+	     		             	{
+	     		             		field:'action',
+	     		             		title:'操作'
+	     		             	}        	
+     		            ];
+    		  }else{
+    			  columns = superData;
+    		  }
+    	  }
+    	  $el.bootstrapTable({
+    		  method:'get',
+    		  url:"{:U('getdata')}"+Odata,
+    		  sortName:'id',
+          	  sortOrder:'desc',
+    		  columns:columns,
+    		  detailView:true,
+    		  onLoadSuccess:function(){
+    			  console.log('成功执行'+"{:U('getdata')}"+Odata);
+    		  },
+    		  onLoadError:function(){
+    			  console.log('失败'+"{:U('getdata')}/"+Odata);
+    		  },
+			  onExpanRow:function(index,row,$detail){
+				  Odata = '/deep/'+row.deep+row.id;
+				  columns = [	
+				            {
+								field:'deep',
+								title:'深度',
+								visible:false
+							},
+			             	{
+			             		field:'id',
+			             		title:row.id,
+			             		sortable:true
+			             	},
+			             	{
+			             		field:'name',
+			             		title:row.name,
+			             	},
+			             	{
+			             		field:'status',
+			             		title:row.status,
+			             	},
+			             	{
+			             		field:'action',
+			             		title:row.action
+			             	}        	
+		           ]; 
+				  expandTable($detail,Odata,columns);
+			  }    		  
+    	  });
+      }
+      
+      
+      
+      
+      
+	/* $(function(){
+    	  $("#units-table").bootstrapTable({
+    		  methods:'get',
+    		  url:"{:U('table_data')}",
+    	  });
+	});  */
+        function showDetailForm(curl=false) {
+    	  
+    	  if(curl==false){
+    		  showDetail("{:U('Communitymanage/add')}");
+    	  }else{
+    		  /* showDetail(curl); */
+    		  console.log(curl);
+    	  }
+            
+        }
+    </script>
+    <!--  <script src="__PUBLIC__/js/custom/app.js"></script> -->
+</block>

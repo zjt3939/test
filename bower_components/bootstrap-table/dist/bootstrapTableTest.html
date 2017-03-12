@@ -10,32 +10,49 @@
     <script src="bootstrap-table.min.js"></script>
 </head>
 <body>
-    <table id="superTable">
+    <table id="superTable" data-detail-view="true">
         <thead>
-            <tr>
+            <tr rowspan="4">
                 <th data-field="id">id</th>
                 <th data-field="name">姓名</th>
                 <th data-field="price">价格</th>
                 <th data-field="createtime">添加时间</th>
             </tr>
-            <tr>
-              <div>
-                <table id="subTable'">
-                    <tr>
-                        <th data-field="id"></th>
-                        <th data-field="name"></th>
-                        <th data-field="price"></th>
-                        <th data-field="createtime"></th>
-                    </tr>
-                </table>
-              </div>
-            </tr>
+            <!--<tr>
+                    <table id="subTable">
+                        <thead>
+                            <tr>
+                                <th data-field="id1"></th>
+                                <th data-field="name1"></th>
+                                <th data-field="price1"></th>
+                                <th data-field="createtime1"></th>
+                            </tr>
+                        </thead>
+                    </table>
+            </tr>-->
         </thead>
     </table>
     <script>
         $(function(){
             $("#superTable").bootstrapTable({
-                url:'data.json'
+                url:'data.json',
+                onLoadSuccess:function(){
+                    $('#subTable').bootstrapTable({
+                        url:'data2.json',
+                        onLoadSuccess:function(){
+                            alert(1);
+                        }
+                    });
+                },
+                onClickCell:function(f,v,r,e){
+                    console.log(f);
+                    console.log(v);
+                    console.log(r);
+                    console.log(e);
+                   if(f=='id'){
+                       console.log();
+                   }
+                },
             });
         });
     </script>

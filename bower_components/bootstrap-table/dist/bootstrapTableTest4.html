@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrapTableTest</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-table.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap-table.min.js"></script>
+</head>
+<body>
+        <table id="table"
+               data-detail-view="true">
+            </thead>
+        </table>
+    </div>
+<script>
+    var datas = [{
+        hidden:'隐藏数据',
+        id:'33',
+        status:'可操作'
+    }];
+    $(function(){
+        $('#table').bootstrapTable({
+            columns:[
+                {
+                    field:'hidden',
+                    title:'隐藏数据',
+                    visible:false
+                },{
+                    field:'id',
+                    title:'名称',
+                },{
+                    field:'status',
+                    title:'状态'
+                }
+            ],
+            data:datas
+        });
+    });
+</script>
+</body>
+</html>

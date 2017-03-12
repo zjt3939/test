@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrapTableTest</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-table.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap-table.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <table id="table"
+               data-detail-view="true">
+            <thead>
+            <tr>
+                <th data-field="id">ID</th>
+                <th data-field="name">Item Name</th>
+                <th data-field="price">Item Price</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+<script>
+    var $table = $('#table');
+    $(function () {
+        buildTable($table, 4, 3);
+        console.log($table);
+    });
+    function expandTable($detail, cells) {
+        buildTable($detail.html('<table></table>').find('table'), cells, 3);
+    }
+    function buildTable($el, cells, rows) {
+        var i, j, row,
+        columns = [],
+        data = [];
+        for (i = 0; i < cells; i++) {
+            columns.push({
+                field: 'id' + i,
+                title: 'Cell' + i,
+                sortable: true
+            });
+        }
+        for (i = 0; i < rows; i++) {
+            row = {};
+            for (j = 0; j < cells; j++) {
+                row['field' + j] = 'Row-' + i + '-' + j;
+            }
+            data.push(row);
+        }
+        $el.bootstrapTable({
+            columns:columns,
+            data:'data.json',
+            detailView: cells > 1,
+            onExpandRow: function (index, row, $detail) {
+                console.log(index);
+                console.log(row);
+                console.log($detail);
+                expandTable($detail, cells - 1);
+            },
+            onClickRow:function(r,e,f){
+                console.log(r);
+                console.log(e);
+                console.log(f);
+            }
+        });
+    }
+</script>
+</body>
+</html>
