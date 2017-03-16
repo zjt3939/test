@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layuicheckbox</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+              
+
+
+<form class="layui-form" action="">
+<!--  
+  <div class="layui-form-item">
+    <label class="layui-form-label">复选框</label>
+    <div class="layui-input-block">
+      <input type="checkbox" name="like[1]" title="写作" value="1">
+      <input type="checkbox" name="like[2]" title="阅读" value="2">
+      <input type="checkbox" name="like[3]" title="游戏" value="3">
+    </div>
+  </div>-->
+
+    <div class="layui-form-item" pane="">
+      <label class="layui-form-label">原始复选框</label>
+      <div class="layui-input-block">
+        <input type="checkbox" name="like1[write]" lay-skin="primary" title="写作" checked="">
+        <input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+        <input type="checkbox" name="like1[game]" lay-skin="primary" title="游戏" disabled="">
+      </div>
+    </div>
+
+    <input type="checkbox" name="test[1]" id="" title="测试1" value="1">
+    <input type="checkbox" name="test[2]" id="" title="测试2" value="2">
+    <input type="checkbox" name="test[3]" id="" title="测试3" value="3">
+    <input type="checkbox" name="test[4]" id="" title="测试4" value="4">
+    <button class="layui-btn layui-btn-normal" lay-filter="*" lay-submit="">提交</button>
+  </form>
+
+<script src="./layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('form', function(){
+  var form = layui.form();
+  //监听提交
+  form.on('submit(*)', function(data){
+    console.log(data.field);
+   $.ajax({
+       type:'GET',
+       url:'checkbox.php',
+       data:data.field,
+       dataType:'json',
+       complete:function(result){
+          alert(result.responseText);
+       }
+   });
+    return false;
+  });
+  
+  
+});
+</script>
+
+</body>
+</html>

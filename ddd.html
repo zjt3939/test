@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<table id="tabList" class="table table-bordered" >
+                    <thead>
+                    <tr>
+                    	<th data-field="express_id" data-visible="false"></th>
+                        <th data-field="code" data-sortable="true" data-width="80">编号</th>
+                        <th data-field="sender_id" data-sortable="true">寄件人</th>
+                        <th data-field="sender_name" data-sortable="true">寄件人姓名</th>
+                        <th data-field="sender_address" data-sortable="true">寄件人地址</th>
+                        <th data-field="sender_mobile" data-sortable="true">寄件人联系电话</th>
+                        <th data-field="addressee_name" data-sortable="true">收件人姓名</th>
+                        <th data-field="addressee_address" data-sortable="true">收件人地址</th>
+                        <th data-field="addressee_mobile" data-sortable="true">收件人联系电话</th>
+                        <th data-field="state_desc" data-sortable="true" data-width="100">{:L('STATUS')}</th>
+                        <th data-field="control" data-formatter="controlFormatter" data-width="300" data-align="center">{:L('ACTIONS')}</th>
+                    </tr>
+                    </thead>
+                </table>
+</body>
+</html>

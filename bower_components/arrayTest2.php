@@ -16,9 +16,15 @@ function grade_sort($x,$y){
 uasort($students,'name_sort');
 print_r($students);
 echo '<br></br>';
-echo '<br></br>';
 uasort($students,'grade_sort');
 print_r($students);
+echo "<br><br>";
+uksort($students,'grade_sort');
+print_r($students);
+echo "<br><br>";
+function string_sort($x,$y){
+    return strcasecmp($x['name'],$y['name']);
+}
+usort($students,'string_sort');
+print_r($students);
 
-sort($students,'name_sort');
-print_r();

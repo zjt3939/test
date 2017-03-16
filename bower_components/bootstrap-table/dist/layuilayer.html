@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layui->layer</title>
+    <link rel="stylesheet" type="" href="./layui/css/layui.css">
+</head>
+<body>
+    <script src="./layui/layui.js"></script>
+    <script>
+        layui.use('layer',function(){
+            var layer = layui.layer,
+                $ = layui.jquery;
+                layer.open({
+                type:1
+                ,skin:'demo-class'
+                ,btn : ['确认','取消']
+                ,yes: function(index,layero){
+                    $.ajax({
+                        
+                    });
+                }
+                ,content: '<p style="text-align:center">确认删除吗</p>'
+                ,shade:[0.8,'#eaeaee']
+                ,anim : 1
+          });   
+        });
+          
+            
+    </script>
+</body>
+</html>
