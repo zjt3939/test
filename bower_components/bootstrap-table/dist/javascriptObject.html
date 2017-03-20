@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function show(){
+            var a = 1111;
+            function subshow(){
+                sub2show();
+                var b = 222;
+                function sub2show(){
+                     sub3show();
+                    function sub3show(){
+                        alert(a);
+                    }
+                   
+                }
+            }
+            subshow();
+            alert(b);//报错
+        }
+        window.onload = function(){
+            show();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
