@@ -29,16 +29,16 @@
         $(function () {
             $.ajax({
                 type: 'GET',
-                url: 'hckjmanagmentdata.json',
+                url: ' .json',
                 dataType: 'json',
                 success: function (re, status, xhr) {
-                    function transform(obj){
-                        var arr = [];
-                        for(var item in obj){
-                            arr.push(obj[item]);
-                        }
-                        return arr;
-                    }
+                    // function transform(obj){
+                    //     var arr = [];
+                    //     for(var item in obj){
+                    //         arr.push(obj[item]);
+                    //     }
+                    //     return arr;
+                    // }
                     var jsondata = eval(re);
                     
                     $.each(jsondata, function (key, value) {
