@@ -1,9 +1,6 @@
 <?php
-$test = $_GET['test'];
-$ary ='';
-foreach($test as $te){
-	$ary .= $te;
-}
 
-
-echo $ary;
+$a=function($b){
+	echo $b;
+};
+$a(444);

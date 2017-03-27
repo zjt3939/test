@@ -6,7 +6,7 @@
     <script src="jquery.min.js"></script>
 </head>
 <body>
-    <form method="get" action="checkbox.php" id="checkboxform">
+    <!--<form method="get" action="checkbox.php" id="checkboxform">
         <input type="checkbox" name="test[]" value="test1" title="test1" id="q">test1
         <input type="checkbox" name="test[]" value="test2" title="test2" id="s">test2
         <input type="checkbox" name="test[]" value="test3" title="test3" id="w">test3
@@ -16,35 +16,49 @@
     </form>
 
     <button type="" onclick="testUrl('http://www.baidu.com');">转到百度</button>
-    
+    -->
 </body>
 <script>    
-    function testUrl(curl){
-        window.location.href = curl;
-    }
+    // function testUrl(curl){
+    //     window.location.href = curl;
+    // }
 
 
-    //    function getFormJson(form) {
-    //         var o = {};
-    //         var a = $(form).serializeArray();
-    //         $.each(a, function () {
-    //             if (o[this.name] !== undefined) {
-    //                 if (!o[this.name].push) {
-    //                     o[this.name] = [o[this.name]];
-    //                 }
-    //                 o[this.name].push(this.value || '');
-    //             } else {
-    //                 o[this.name] = this.value || '';
-    //             }
-    //         });
-    //         return o;
-    //     }
-    window.onload = function(){
-        (function test(){
-            alert(1);
-        }());
-    }
-
+    // //    function getFormJson(form) {
+    // //         var o = {};
+    // //         var a = $(form).serializeArray();
+    // //         $.each(a, function () {
+    // //             if (o[this.name] !== undefined) {
+    // //                 if (!o[this.name].push) {
+    // //                     o[this.name] = [o[this.name]];
+    // //                 }
+    // //                 o[this.name].push(this.value || '');
+    // //             } else {
+    // //                 o[this.name] = this.value || '';
+    // //             }
+    // //         });
+    // //         return o;
+    // //     }
+    // window.onload = function(){
+    //     (function test(){
+    //         alert(1);
+    //     }());
+    // }
+    var data = {
+         "14_cid": {
+        "name": "葫芦娃小区",
+        "company_id": "25",
+        "user_id": "2",
+        "theme_id": "0",
+        "create_time": "1489455219",
+        "create_user_id": "1",
+        "update_time": "1489741331",
+        "update_user_id": "2"
+         }
+    };
+    $.each(data,function(key,value){
+        console.log(key+'---->'+value);
+    });
 
 </script>
 </html>

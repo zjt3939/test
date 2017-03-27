@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <script src="jquery.min.js"></script>
+    <title>layuicheckedbox</title>
+</head>
+<body>
+   <form class="layui-form">
+        <div class="layui-form-inline">
+            <input type="checkbox" name="like" id="" title="篮球" checked>
+            <input type="checkbox" name="like" id="" title="足球">
+            <input type="checkbox" name="like" id="" title="羽毛球">
+            <input type="checkbox" name="like" id="" title="排球">
+        </div>
+   </form>
+    <script src="./layui/layui.js"></script>
+    <script>
+    layui.use('form',function(){
+        var form = layui.form();
+    });
+    </script>
+</body>
+</html>

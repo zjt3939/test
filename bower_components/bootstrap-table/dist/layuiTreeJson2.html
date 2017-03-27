@@ -19,7 +19,7 @@
 </body>
 <script src="./layui/layui.js"></script>
 <script>
-    var nodeData;
+    var nodeData = [];
     function add(id){
         alert(id);
     }
@@ -32,23 +32,23 @@
                 url: 'hckjmanagmentdata.json',
                 dataType: 'json',
                 success: function (re, status, xhr) {
-                    var jsondata = eval(re);
-                    $.each(jsondata, function (key, value) {
-                        value.name += value.id + '<button class="layui-btn layui-btn-normal class="layui-btn layui-btn-mini" style="margin-left:30px;" onclick="add('+value.id+')">添加<button>';
-                        getTree(key, value);
-                        function getTree(key, value) {
-                            if (typeof (value.children) != 'undefined' && value.children instanceof Array) {
-                                $.each(value.children, function (key, value) {
-                                    value.name += value.id +  '<button class="layui-btn layui-btn-normal class="layui-btn layui-btn-mini" style="margin-left:30px;" onclick="add('+value.id+')">添加<button>';
-                                    getTree(key, value);
-                                });
-                            }else{
-                                return false;
-                            }
+                    function transform(obj){
+                        var arr = [];
+                        for(var item in obj){
+                            arr.push(obj[item]);
                         }
+                        return arr;
+                    }
+                    var jsondata = eval(re);
+                    
+                    $.each(jsondata, function (key, value) {
+                        nodeData.push({
+                            name:value.name,
+                            company_id
+                        });
 
                     }); 
-                    nodeData = jsondata;
+                    // nodeData = jsondata;
                     // debugger;
                     console.log(nodeData);
                     // nodeData = JSON.stringify(jsondata);

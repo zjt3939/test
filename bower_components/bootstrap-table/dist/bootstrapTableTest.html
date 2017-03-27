@@ -35,25 +35,9 @@
     <script>
         $(function(){
             $("#superTable").bootstrapTable({
-                url:'data.json',
-                onLoadSuccess:function(){
-                    $('#subTable').bootstrapTable({
-                        url:'data2.json',
-                        onLoadSuccess:function(){
-                            alert(1);
-                        }
-                    });
-                },
-                onClickCell:function(f,v,r,e){
-                    console.log(f);
-                    console.log(v);
-                    console.log(r);
-                    console.log(e);
-                   if(f=='id'){
-                       console.log();
-                   }
-                },
+                url:'data.json'
             });
+            $();
         });
     </script>
 </body>

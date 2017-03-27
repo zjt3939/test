@@ -38,5 +38,5 @@ foreach($res as $key=>$vo){
 unset($res);
 
 $tree = json_encode($tree);
-echo $tree;
-// print_r($tree);
+// echo $tree;
+print_r($tree);
