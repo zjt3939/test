@@ -5,8 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>自定义高度宽度滚动条组件</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .peripherybox {width: 1200px;height: 50px;}
+        .viewport {width: 100%;height: 100%;overflow: hidden;border: 1px solid #1e3a83;position: relative;}
+        .viewport>ul{position: absolute;width: 100%;height: 100%;}
+        .viewport>ul>li{
+            height: 100%;
+            line-height: 100%;
+        }
+    </style>    
+    <script src="jquery.min.js"></script>
+    <script>
+        var liHeight;
+     $(function(){
+          liHeight =$('.peripherybox').height();
+          $('.rollcontentbox').css("line-height",liHeight+'px');
+     });
+      
+       $(function(){
+            rollbox();
+             $('.viewport').mouseenter(function(){
+                $('.viewport ul').stop();
+             }).mouseleave(function(){
+                rollbox();
+             });
+       });
+       function rollbox(){
+           $('.viewport ul').animate({
+                    top:-3.6*liHeight
+                },12000,function(){
+                     $('.viewport ul').css('top','0px');
+                     rollbox();
+                });
+       }
+    </script>
+    <script>
+        
+    </script>
 </head>
 <body>
-    
+    <div class="peripherybox">
+        <div class="viewport">
+            <ul>
+                <li class="rollcontentbox">这是第1条广告</li>
+                <li class="rollcontentbox">这是第2条广告</li>
+                <li class="rollcontentbox">这是第3条广告</li>
+                <li class="rollcontentbox">这是第4条广告</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
