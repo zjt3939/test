@@ -4,9 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../jquery.min.js"></script>
     <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+          font-family:Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;
+        }
+    html,body{
+        width:100%;
+        height: 100vh;
+    }
+    .videobox{
+        position: relative;
+        width:100%;
+        min-height: 100vh;  
+        text-align: center;
+        overflow: hidden;
+        background-color: #000;
+        z-index: -3;
+    }
+
+    .videoContent{
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        min-width: 100%;
+        min-height:100%;
+    }
+    .videobox:after{
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: '';
+        z-index: 4;
+        position: absolute;
+        background-color: rgba(0,0,0,0.25);
+    }
+    /*.videoP{
+        position: absolute;
+        color: #dfcb11;
+        font-size: 155px;
+        text-align: center;
+        width: 100%;
+        top: 36%;
+    }*/
+    .WebPurport{
+        position: absolute;
+        z-index: 3;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        min-width: 100%;
+        min-height:100%;
+        display: none;
+        
+       
+    }
+    .blackLump{
+        width: 50%;
+        font-size: 155px;
+        height: 100vh;
+        line-height: 100vh;
+        position: relative;
+        float: left;
+        background-color: #000;
+        color: #fdffff;
+        font-weight: 600;
+        overflow: hidden;
+    }
+    .whiteLump{
+        overflow: hidden;
+        width: 50%;
+        font-size: 155px;
+        position: relative;
+        height: 80vh;
+        float: right;
+        background-color: #fbffff;
+        top: 10vh;
+        color: #000;
+        font-weight: 600;
+        line-height: 80vh;
+    }
+    .blackLump>span{
+        color:#fbffff;
+        position: absolute;
+        right: -82px;
+    }
+    .whiteLump>span{
+        color:#000;
+        position: absolute;
+        left: -47px;
+    }
+  
+    </style>
 </head>
 <body>
-    
+        
+    <!--<nav>
+        
+    </nav>-->
+    <div class="videobox" style="width:100%;height: 100%;min-height: 100vh;">
+        <video class="videoContent" src="indexVideo.mp4" autoplay="autoplay" id="video">
+        </video>
+        <div class="WebPurport">
+            <div class="blackLump"><span><span style="color:#dfcb11; "style="color:#dfcb11; ">love</span>&</span></div>
+            <div class="whiteLump"><span>&<span style="color:#dfcb11; ">Peace</span></span></div>
+            <!--<p class="videoP"><span>Love</span><span>Peace</span></p>-->
+        </div>
+        
+    </div>
+   <script>
+       $(function(){
+            $('#video').on('ended',function(){
+               $('.videoContent').hide();
+               $('.WebPurport').show();
+            })
+       })
+   </script>
 </body>
 </html>
