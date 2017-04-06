@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>select框点击事件并获取对应的option的值</title>
+    <script src="./jquery.min.js">
+    </script>
+</head>
+<body>
+    <select id="sec" name="sec">
+        <option class="op" value="1">no.1</option>
+        <option class="op" value="2">no.2</option>
+        <option class="op" value="3">no.3</option>
+        <option class="op" value="4">no.4</option>
+        <option class="op" value="5">no.5</option>
+    </select>
+    
+    <script>
+    // $('.op').select(function(){
+    //     console.log(this);
+    // });
+
+    // function func(){
+    //     var vs = $('select ')
+    // }
+   $(function(){debugger;
+        $('#sec').on("change",function(){
+        var dataname = $(this).val();
+        alert(dataname);
+
+    })
+   });
+
+    </script>
+</body>
+</html>

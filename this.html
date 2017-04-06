@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js中的this机制</title>
+    <script>
+        /*function identify(){
+            return this.name.toUpperCase();
+        }
+        function sayHello(){
+            var greeting = "Hello,I'm"+identify.call(this);
+            console.log(greeting);
+        }
+        var person1 = {
+            name:'Kyle'
+        };
+        var person2 = {
+            name:'Reader'
+        };
+        identify.call(person1);
+        identify.call(person2);
+        sayHello.call(person1);//Hello,I'mKYLE
+        sayHello.call(person2);//Hello,I'mREADER*/
+
+        /*
+                function fn(num){
+                    console.log("fn"+num);
+                    this.count++;
+                }
+                fn.count = 0;
+                var i = 0;
+                for(i=0;i<10;i++){
+                    if(i>5){
+                        fn(i);
+                    }
+                }
+                console.log(fn.count);//0*/
+        function fn(num) {
+            console.log("fn: " + num);
+            // count用于记录fn的被调用次数
+            this.count++;
+        }
+        fn.count = 0;
+        var i;
+        for (i = 0; i < 10; i++) {
+            if (i > 5) {
+                fn(i);
+            }
+        }
+        // fn: 6
+        // fn: 7
+        // fn: 8
+        // fn: 9
+
+        console.log(fn.count); // 0 -- 耶？咋不是4捏？
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

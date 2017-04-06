@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>call and apply</title>
+    <script>
+        // function add(a,b){
+        //     alert(a+b);
+        // }
+        // function sub(a,b){
+        //     alert(a-b);
+        // }
+        // add.call(sub,3,1);//4
+
+        /*function Animal(name){
+            this.name = name;
+            this.showName = function(){
+                alert(this.name);
+            }
+            console.log(this);
+            console.log(this.name);
+            //this=Cat
+            //{name:'black cat'}
+            //showname:function(){}
+        }
+        function Cat(name){
+            //相当于将animal中的方法放到cat上执行，
+            //然后this.name = Cat.name 这里等于实例中的black cat
+            Animal.call(this,name);
+            console.log(this);
+        }
+        var cat = new Cat("black cat");
+        cat.showName();//black cat*/
+/*
+        function Animal(name){
+            this.name = name;
+            this.showname =function(){
+                alert(this.name);
+            }
+        }
+        function Cat(name){
+            //意思就是使用Anima对象代替this对象，那么Cat中不就有Animal的所有属性和方法了吗，
+            //Cat对象就能够直接调用Animal的方法以及属性了
+
+            Animal.call(this.name);
+        }
+        var cat = new Cat("white cat");
+        cat.showName();*/
+
+        function Class10(){
+            this.showSub = function(a,b){
+                alert(a-b);
+            }
+        }
+
+        function Class11(){
+            this.showAdd = function(a,b){
+                alert(a+b);
+            }
+        }
+
+        function Class2(){
+            Class10.call(this);
+            Class11.call(this);
+        }
+        //使用两个call就是实现多重继承；
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
