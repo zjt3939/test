@@ -19,7 +19,7 @@
     function read_session($sid){
         global $sdbc;
         $q = sprintf('select data from sessions where id="%s"',mysqli_real_escape_string($sdbc,$sid));
-        $r = mysqli_qurey($sdbc,$q);
+        $r = mysqli_query($sdbc,$q);
         if(mysqli_num_rows($r)==1){
             list($data) = mysqli_fetch_array($r,MYSQLI_NUM);
             return $data;
