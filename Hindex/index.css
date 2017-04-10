@@ -1,0 +1,180 @@
+* {
+            margin: 0px;
+            padding: 0px;
+            font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100vh;
+            min-width: 1300px;
+            max-width: 2500px;
+        }
+         
+        .clearboth:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .range {
+            width: 80%;
+            margin: 0 auto;
+            /*border: 1px solid #fff;*/
+        }
+        li{
+            list-style-type: none;
+        }
+        
+        /*nav部分*/
+        nav {
+            width: 100%;
+            position: absolute;
+            color: #fff;
+            background-color: rgba(221, 221, 221, 0.2);
+        }
+        
+        nav.websiteNav:after {
+            display: block;
+            content: '';
+            height: 2px;
+            background-color: #ffec0d;
+        }
+        .navbox,.logobox,.loginAndRebox,navul{
+            display: inline-block;
+            float: left;
+        }
+        .navbox{
+            width: 70%;
+            /*border: 1px solid #fff;*/
+
+        }
+        ul.navul li {
+            display: inline-block;
+            float: left;
+            
+        }
+        .logobox>img{
+            width: 100px;
+            height: 100%;
+
+        }
+        .loginAndRebox{
+            width:28%;
+        }
+        .logobox{
+            width: 20%;
+        }
+        .navul{
+            float: left;
+            width: 79%;
+            padding-top: 30px;
+            /*border: 1px solid #fff;*/
+        }
+        .navul li{
+            display: inline-block;
+            /*border: 1px solid #fff;*/
+            float: left;
+            padding: 3px 30px;
+            font-size: 1.2em;
+            margin-left: 5px;
+            border: 1px solid rgba(0,0, 0, 0);
+
+        }
+        .navul li:hover{
+            color:  #ffec0d;
+            border: 1px solid #ffec0d; 
+        }
+        /*nav结束*/
+       
+        
+        /*视频*/
+        .videobox {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            background-color: #000;
+            z-index: -3;
+        }
+        
+        .videoContent {
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            min-width: 100%;
+            min-height: 100%;
+        }
+       
+        .videobox:after {
+            display: none;
+            width: 100%;
+            height: 100%;
+            content: '';
+            z-index: 4;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+        /*.videoP{
+        position: absolute;
+        color: #dfcb11;
+        font-size: 155px;
+        text-align: center;
+        width: 100%;
+        top: 36%;
+    }*/
+        
+        .WebPurport {
+            position: absolute;
+            z-index: 3;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            display: none;
+        }
+        
+        .blackLump {
+            width: 50%;
+            font-size: 155px;
+            height: 100vh;
+            line-height: 100vh;
+            position: relative;
+            float: left;
+            background-color: #000;
+            color: #fdffff;
+            font-weight: 600;
+            overflow: hidden;
+        }
+        
+        .whiteLump {
+            overflow: hidden;
+            width: 50%;
+            font-size: 155px;
+            position: relative;
+            height: 80vh;
+            float: right;
+            background-color: #fbffff;
+            top: 10vh;
+            color: #000;
+            font-weight: 600;
+            line-height: 80vh;
+        }
+        
+        .blackLump>span {
+            color: #fbffff;
+            position: absolute;
+            right: -82px;
+        }
+        
+        .whiteLump>span {
+            color: #000;
+            position: absolute;
+            left: -47px;
+        }
+        /*视频结束*/
