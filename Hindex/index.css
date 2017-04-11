@@ -1,11 +1,10 @@
 * {
             margin: 0px;
             padding: 0px;
-            font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+            font-family:  "微软雅黑";
         }
         
-        html,
-        body {
+        html, body {
             width: 100%;
             height: 100vh;
             min-width: 1300px;
@@ -28,48 +27,64 @@
         }
         
         /*nav部分*/
-        nav {
+        nav.websiteNav{
             width: 100%;
+            min-width: 100%;
             position: absolute;
+             min-width: 1300px;
+            max-width: 2500px;
             color: #fff;
+            height: 90px;
             background-color: rgba(221, 221, 221, 0.2);
+            z-index: 99999;
         }
         
         nav.websiteNav:after {
             display: block;
             content: '';
             height: 2px;
-            background-color: #ffec0d;
+            background-color: #857650;
         }
-        .navbox,.logobox,.loginAndRebox,navul{
+        /*.navbox,.logobox,.loginAndRebox,navul{
             display: inline-block;
             float: left;
+        }*/
+        .navsubbox{
+            position: relative;
         }
         .navbox{
             width: 70%;
+            min-height: 30px;
+            float: left;
             /*border: 1px solid #fff;*/
 
         }
         ul.navul li {
             display: inline-block;
-            float: left;
+            /*float: left;*/
             
         }
         .logobox>img{
-            width: 100px;
-            height: 100%;
+            width: 80px;
+            position: absolute;
+
 
         }
         .loginAndRebox{
             width:28%;
+            float: right;
         }
         .logobox{
             width: 20%;
+            position: relative;
+            min-width: 20%;
+            min-height:50px;
+            float: left;
         }
         .navul{
             float: left;
             width: 79%;
-            padding-top: 30px;
+            line-height: 80px;
             /*border: 1px solid #fff;*/
         }
         .navul li{
@@ -77,14 +92,14 @@
             /*border: 1px solid #fff;*/
             float: left;
             padding: 3px 30px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin-left: 5px;
             border: 1px solid rgba(0,0, 0, 0);
 
         }
         .navul li:hover{
-            color:  #ffec0d;
-            border: 1px solid #ffec0d; 
+            color:  #fbd60d;
+            cursor: pointer;
         }
         /*nav结束*/
        
@@ -178,3 +193,29 @@
             left: -47px;
         }
         /*视频结束*/
+
+        /*首页内容 main*/
+        .main{
+            height: 100vh;
+            width: 100%;
+            background:#000 url('bg02.jpg')no-repeat;
+            background-position: center center;
+            background-size: cover;
+
+        }
+        .paddingbox{
+            width: 100%;
+            height: 30px;
+            background-color: #000;
+        }
+        .main:after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: '';
+            z-index: 2;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
