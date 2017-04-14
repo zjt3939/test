@@ -55,7 +55,9 @@ $album_title ='/<span class\=\"bottom\_box\"\>([.]*)\<\/span\>/';
 
 
 phpQuery::newDocumentFile('http://jwjam.com/Jwjam/Article/article_album');
-print_r(explode("\n",pq(".bottom_box")->html())[1]);
+// print_r(explode("\n",pq(".bottom_box")->html())[1]);
+// var_dump(pq("#contentBox a")->eq(1)->attr('href'));
+var_dump(pq("#contentBox a")['previous']['elements']);
 
 // $title_data = curlPost('http://jwjam.com/Jwjam/Article/article_album');
 // preg_match_all($album_title,$title_data,$title_arr);
