@@ -1,6 +1,6 @@
 <?php
 
-例一
+//例一
 //在函数里定义一个匿名函数，并调用它
 // function printStr(){
 //     $func = function($str){
