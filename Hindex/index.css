@@ -10,17 +10,34 @@
             min-width: 1300px;
             max-width: 2500px;
         }
-         
+         /*清除浮动*/
         .clearboth:after {
             content: '';
             display: block;
             clear: both;
         }
-        
+        /*范围*/
         .range {
             width: 80%;
             margin: 0 auto;
             /*border: 1px solid #fff;*/
+        }
+        /*倾斜*/
+        .skew {
+            -webkit-transform: skew(-14deg, 0deg);
+            -moz-transform: skew(-14deg, 0deg);
+            -ms-transform: skew(-14deg, 0deg);
+            -o-transform: skew(-14deg, 0deg);
+            transform: skew(-14deg, 0deg);
+        }
+        /*反倾斜*/
+        .skew-inner {
+            display: block;
+            -webkit-transform: skew(14deg, 0deg);
+            -moz-transform: skew(14deg, 0deg);
+            -ms-transform: skew(14deg, 0deg);
+            -o-transform: skew(14deg, 0deg);
+            transform: skew(14deg, 0deg);
         }
         li{
             list-style-type: none;
@@ -28,6 +45,7 @@
         a{
             text-decoration: none;
         }
+
         
         /*nav部分*/
         nav.websiteNav{
@@ -39,7 +57,7 @@
             color: #fff;
             height: 90px;
             background-color: rgba(221, 221, 221, 0.3);
-            z-index: 99999;
+            z-index: 0;
         }
         
         nav.websiteNav:after {
@@ -204,64 +222,6 @@
             position: absolute;
             background-color: rgba(0, 0, 0, 0.25);
         }
-        /*.videoP{
-        position: absolute;
-        color: #dfcb11;
-        font-size: 155px;
-        text-align: center;
-        width: 100%;
-        top: 36%;
-    }*/
-        
-      /*  .WebPurport {
-            position: absolute;
-            z-index: 3;
-            height: 100%;
-            top: 0px;
-            left: 0px;
-            min-width: 100%;
-            min-height: 100%;
-            display: none;
-        }
-        
-        .blackLump {
-            width: 50%;
-            font-size: 155px;
-            height: 100vh;
-            line-height: 100vh;
-            position: relative;
-            float: left;
-            background-color: #000;
-            color: #fdffff;
-            font-weight: 600;
-            overflow: hidden;
-        }
-        
-        .whiteLump {
-            overflow: hidden;
-            width: 50%;
-            font-size: 155px;
-            position: relative;
-            height: 80vh;
-            float: right;
-            background-color: #fbffff;
-            top: 10vh;
-            color: #000;
-            font-weight: 600;
-            line-height: 80vh;
-        }
-        
-        .blackLump>span {
-            color: #fbffff;
-            position: absolute;
-            right: -82px;
-        }
-        
-        .whiteLump>span {
-            color: #000;
-            position: absolute;
-            left: -47px;
-        }*/
            .websitepurport{
             position: absolute;
             z-index: 99999;
@@ -275,32 +235,45 @@
            }
         /*视频结束*/
 
-        /*首页内容 main*/
-        .main{
-            height: 90vh;
+        /*首页内容 hotmain*/
+        .hotmain{
+            height: 100vh;
             width: 100%;
-            background:#000 url('bg04.png')no-repeat;
+           /* background:#000 url('bg04.png')no-repeat;
             background-position: center center;
-            background-size:cover;
+            background-size:cover;*/
             overflow: hidden;
+            min-height: 1000px;
+            padding-bottom: 50px;
 
         }
-        .paddingbox{
+        .paddingbox1,.paddingbox2{
             width: 100%;
             height: 50px;
-            background-color: #000;
+            
             position: relative;
         }
-        .paddingbox:after{
+        .paddingbox1{
+            background-color: #fff;
+        }
+        .paddingbox2{
+            background-color: #000;
+        }
+        .paddingbox1:after,.paddingbox2:after{
             content: '';
             display: block;
             position: absolute;
-            z-index: 0;
-            border-top: 160px solid #000;
-            border-right: 2300px solid transparent;
-            
+            z-index: 0;    
         }
-        /*.main:after{
+        .paddingbox1:after{
+              border-top: 200px solid #fff;
+            border-right: 2300px solid transparent;
+        }
+         .paddingbox2:after{
+              border-top: 200px solid #000;
+            border-right: 2300px solid transparent;
+        }
+        /*.hotmain:after{
             content: '';
             display: block;
             position: absolute;
@@ -315,10 +288,15 @@
         .Contentbox{
             margin-top: 60px;
         }
+        .hotVideobox{
+            z-index: 999;
+            position:relative;
+        }
         .ContentTitle{
             text-align: center;
         }
         .ContentTitle>img{
+            margin-top: 30px;
             width: 300px;
         }
         .ContentTitle>p{
@@ -327,3 +305,201 @@
             font-size: 1.5em;
             top: -15px;
         }
+
+        .vcontentul{
+            width: 100%;
+            /*border: 1px solid red;*/
+        }
+
+        .vcontentul li{
+            float: left;
+            width:23%;
+            /*border: 1px solid #fff;*/
+            height: 380px;
+            margin-left: 1.5%;
+            padding-top: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .vcontentul>li:hover img{
+           /*animation: imgBigger 1s ease;*/
+           transition:height 0.5s ease-out;
+           height:420px;
+        }
+       /* @keyframes imgBigger{
+            from{ height:380px;}
+            to{height: 450px;}
+        }*/
+        .vcontentul li:nth-of-type(1){
+            width: 47.5%;
+            /*border:1px solid blue;*/
+        }
+        .vcontentul li:not(:first-child)::after{
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: url('video.png')no-repeat center center;
+            background-size: 50px;
+            position: absolute;
+            top: 48%;
+            left: 46%;
+        }
+       
+        .vlibox{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #fff;
+        }
+        .vimgbox{
+            height: 380px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+         .vlibox img{
+             /*width: 100%;
+             a*/
+             height: 380px;
+
+         }
+          .vcontentul li:nth-of-type(1) .vimgbox{
+            width: 100%;
+            height: 100%;
+        }
+        .vcontentul li:nth-of-type(1) .vimgbox img{
+            width: 100%;
+            height: auto;
+        }
+
+        .controls{
+            display: block;
+            position: absolute;
+            top: -40%;
+            left: -40%;
+            width: 32px;
+            height: 32px;
+            background: url('video.png')no-repeat center center;
+            background-size: 32px;
+        }
+
+        .videourl{
+            display: block;
+            cursor: pointer;
+            width: 100%;
+        }
+        .videoName{
+            padding:10px 20px;
+            width: 60%;
+            height: 50px;
+            color: #000;
+            background-color: #f0f0f0;
+            position: absolute;
+            bottom: 20px;
+            left: -10px;
+            /*display: none;*/
+
+        }
+        .videoNamebox{
+            display: none;
+        }
+         .videoName p{
+            line-height: 1.2em;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        .videoName span{
+            margin-top: 5px;
+            padding-left: 4px;
+            display: block;
+            float: left;
+            font-size: 0.8em;
+            color: #0f0f0f;
+        }
+        .rankVideo{
+            position: absolute;
+            top: 14px;
+            left:0px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bolder;
+            color: #fff;;
+            background-color: #000;
+            /*border-radius: 50%;*/
+        }
+
+        .sdvideo1{
+            width:100%;height:380px;
+        }
+
+/*
+    hotmain 2
+*/
+    .newVideoul{
+        width: 100%;
+        /*border: 1px solid red;*/
+        text-align: center;
+        padding-left: 20px;
+    }
+    .newVideoul li{
+        float: left;
+        width:22%;
+        margin:10px 1%;
+        border: 1px solid #000;
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        background-color: #000;
+        border-radius: 2px;
+    }
+    .newVideoul li>a:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 220px;
+        position: absolute;
+        top: 0px;
+        z-index: 2;   
+        background: rgba(0,0,0,0.3) url('video.png')no-repeat center center;
+        background-size: 50px;
+    }
+    .newVideoul>li img{
+        width:100%;
+        
+    }
+    .newVideoName{
+        padding:10px 15px;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        z-index: 5;
+        color: #fff;
+        text-align: left;
+        background-color: rgba(0,0,0,0.7);
+    }
+    .newVideoNam p{
+        line-height: 1.2em;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .newVideoName>span{
+        font-size: 0.7em;
+    }
+    
+/*
+    footer
+*/
+footer{
+    height: 500px;
+    background: #000;
+}

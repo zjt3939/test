@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../jquery.min.js"></script>
+    <script src="video.min.js"></script>
     <link rel="stylesheet" href="animate.min.css">
     <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" href="video-js.css">
     <title>Document</title>
 </head>
 
@@ -47,7 +49,7 @@
         a
     </nav>-->
     <div class="videobox" >
-        <video class="videoContent" src="video.mp4" autoplay    id="video">
+        <video class="videoContent" src="video.mp4" autoplay muted   id="video">
         </video>
         <!--<div class="WebPurport">
             <div class="blackLump"><span><span style="color:#dfcb11z; "style="color:#dfcb11; ">love</span>&</span></div>
@@ -60,65 +62,354 @@
 
     </div>
   
-    <div class="main">
-        <div class="paddingbox"></div>
+    <div class="hotmain" style=" background:#000 url('bg04.png')no-repeat;
+            background-position: center center;
+            background-size:cover;">
+        <div class="paddingbox1"></div>
         <div class="range Contentbox">
-            <div class="newVideobox">
+            <div class="hotVideobox">
                 <div class="ContentTitle">
-                    <img src="newVideo.png" alt="">
-                    <p>LATEST VIDEO</p>
+                    <img src="hotVideo.png" alt="">
+                    <p>HOTTEST VIDEO</p>
                 </div>
                 <div class="Videocontent">
-                    ul>li*
+                    <ul class="clearboth vcontentul">
+                        <li>
+                            <div class="vlibox">
+                               <!--<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&amp;code=S2bef9d1lbU&amp;lcode=&amp;resourceId=351669951_06_05_99" allowtransparency="true" scrolling="no" border="0" frameborder="0" style="width: 100%; height: 380px;"></iframe>-->
+                               <video id="sdvideo1" class="video-js vjs-big-play-centered sdvideo1" controls >
+                                <source src="s.mp4" type="video/mp4">
+                               </video>
+                               <!--<i class="controls"></i>
+                                <div class="vimgbox">
+                                    <img src="a.jpg"  alt="">
+                                </div>-->
+                                <div></div>
+                            </div>
+                        </li>
+                         <li>
+                            <a href="" class="videourl">
+                                <div class="vlibox">
+                                    <div class="vimgbox">
+                                        <img src="a.jpg"  alt="">
+                                    </div>
+                                    <div class="rankVideo">
+                                        2
+                                    </div>
+                                    <div class="videoNamebox">
+                                        <div class="videoName skew">
+                                            <p class="skew-inner">red bull bcone all starhfvudhiaghiohgiohsdgahgiogdhsoifhiosdahfiofsdhaosdhaoghsdgaho</p>
+                                            <span>2017-6-10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="videourl">
+                                <div class="vlibox">
+                                    <div class="vimgbox">
+                                        <img src="a.jpg"  alt="">
+                                    </div>
+                                    <div class="rankVideo">
+                                        3
+                                    </div> 
+                                    <div class="videoNamebox">
+                                        <div class="videoName skew">
+                                            <p class="skew-inner">red bull bcone all starhfvudhiaghiohgiohsdgahgiogdhsoifhiosdahfiofsdhaosdhaoghsdgaho</p>
+                                            <span>2017-6-10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="videourl">
+                                <div class="vlibox">
+                                    <div class="vimgbox">
+                                        <img src="a.jpg"  alt="">
+                                    </div>
+                                     <div class="rankVideo">
+                                        4
+                                    </div>
+                                    <div class="videoNamebox">
+                                        <div class="videoName skew">
+                                            <p class="skew-inner">red bull bcone all starhfvudhiaghiohgiohsdgahgiogdhsoifhiosdahfiofsdhaosdhaoghsdgaho</p>
+                                            <span>2017-6-10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="videourl">
+                                <div class="vlibox">
+                                    <div class="vimgbox">
+                                        <img src="a.jpg"  alt="">
+                                    </div>
+                                     <div class="rankVideo">
+                                        5
+                                    </div>
+                                    <div class="videoNamebox">
+                                        <div class="videoName skew">
+                                            <p class="skew-inner">red bull bcone all starhfvudhiaghiohgiohsdgahgiogdhsoifhiosdahfiofsdhaosdhaoghsdgaho</p>
+                                            <span>2017-6-10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="videourl">
+                                <div class="vlibox">
+                                    <div class="vimgbox">
+                                        <img src="a.jpg"  alt="">
+                                    </div>
+                                     <div class="rankVideo">
+                                        6
+                                    </div>
+                                    <div class="videoNamebox">
+                                        <div class="videoName skew">
+                                            <p class="skew-inner">red bull bcone all starhfvudhiaghiohgiohsdgahgiogdhsoifhiosdahfiofsdhaosdhaoghsdgaho</p>
+                                            <span>2017-6-10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="videourl">
+                                <div class="vlibox">
+                                    <div class="vimgbox">
+                                        <img src="a.jpg"  alt="">
+                                    </div>
+                                     <div class="rankVideo">
+                                        7
+                                    </div>
+                                    <div class="videoNamebox">
+                                        <div class="videoName skew">
+                                            <p class="skew-inner">red bull bcone all starhfvudhiaghiohgiohsdgahgiogdhsoifhiosdahfiofsdhaosdhaoghsdgaho</p>
+                                            <span>2017-6-10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                         
+                    </ul>
                 </div>
             </div>
-            <div class="lastestNew"></div>
-            <div class="newalbum"></div>
-            <div class="newMusic"></div>
-            <div class="newImage"></div>
+        </div>
+    </div>
+    <div class="hotmain" style="background:#fff url('world.png')no-repeat;
+            background-position: center center;
+            background-size:cover;">
+        <div class="paddingbox2"></div>
+        <div class="range Contentbox">
+            <div class="ContentTitle">
+                <img src="newVideo.png" alt="">
+                <p style="color:#000;font-weight:bolder;">HOTTEST VIDEO</p>
+            </div>
+            <div class="newVideoContent">
+                <ul class="newVideoul clearboth">
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="videourl">
+                            <img src="aa.jpg" alt="" class="newImg">
+                            <div class="newVideoName">
+                                <p>rend wehre dhihi hihih</p>
+                                <span>2017-4-16</span>
+                            </div>
+                        </a>
+                    </li>
+                   
+
+                </ul>
+            </div>
         </div>
     </div>
     <script>
+        var fullscreenclicknum =1;
+        function isInteger(obj) {
+            return (obj | 0) === obj
+        }
         $(function () {
             $('#video').on('ended', function () {
                 // $('.videoContent').hide();
-                $('.websitepurport').show().addClass('animated zoomIn');
+                $('.websitepurport').show().addClass('animated fadeInRightBig');
             })
             $('.websiteNav,.videobox').addClass('animated flash');
+            $('.vjs-fullscreen-control').on('click',function(){
+                /*if(isInteger(fullscreenclicknum/2)){
+                     $('.websiteNav').show();
+                }else{
+                    $('.websiteNav').hide();
+                }
+                fullscreenclicknum++; */
+                $('#sdvideo1').css("height","100%");
+                               
+            });
+
+            $('.vcontentul li').mouseover(function(){
+                $(this).find('.videoNamebox').addClass('animated slideInLeft').show();
+            }).mouseleave(function(){
+                $(this).find('.videoNamebox').hide();
+            });
+
+            $('.newVideoul li').mouseover(function(){
+                $(this).find('.newImg').addClass('animated pulse');
+            }).mouseleave(function(){
+                $(this).find('.newImg').removeClass('animated pulse');
+            });
 
         })
-        $('#video').on('click', function () {
-            $('#video').pause();
-        })
+        // $('#video').on('click', function () {
+        //     $('#video').pause();
+        // })
         $('.navul li').on('mouseover', function () {
             $(this).addClass('animated tada');
         }).on('mouseout', function () {
             $(this).removeClass('animated tada');
         });
 
+        /*视频滚动触发事件*/
         window.onscroll = function () {
             var WindowScrollTop = $(window).scrollTop();
+
+            /*导航条的缩放*/
             if (WindowScrollTop > 50) {
-                $('.websiteNav').css({ "height": "60px", "position": "fixed", "background-color": "rgba(0,0, 0,0.8)" });
+                $('.websiteNav').css({ "height": "60px", "position": "fixed", "background-color": "rgba(0,0, 0,0.8)","z-index":"9999" });
                 $('.navul').css("line-height", "52px");
                 $('.loginsubbox').css({"top":"23px"});
                 $('.keywords').css({"top":"28px"});
               
             } else {
-                $('.websiteNav').css({ "height": "90px", "position": "ababsolute", "background-color": "rgba(221, 221, 221, 0.2)" });
+                $('.websiteNav').css({ "height": "90px", "position": "ababsolute", "background-color": "rgba(221, 221, 221, 0.2)","z-index":"0" });
                 $('.navul').css("line-height", "80px");
                 $('.loginsubbox,.keywords').css({"top":"50px"});
                 $('.keywords').css({"top":"55px"});
             }
+            /*滚动高度大于一个视口时，视频结束播放*/
+            if(WindowScrollTop>$(window).height()/2.5){
+                // console.log(document.getElementById('video').duration);
+               document.getElementById('video').currentTime = parseFloat(document.getElementById('video').duration);
+               $('#video').trigger('ended');
+               $('.vcontentul>li:nth-child(2n)').addClass('animated bounceInLeft').show();
+               $('.vcontentul>li:nth-child(2n+1)').addClass('animated bounceInRight').show();
+            }
         }
 
+        /*登录注册滑动事件*/
        $('.loginsubbox').mouseover(function(){
             $('.navlbox').slideDown();
         }).mouseleave(function(){
              $('.navlbox').slideUp();
         });
+      
+        
 
     </script>
+     <script type="text/javascript">
+			var myPlayer = videojs('sdvideo1');
+		</script>
 </body>
 
 </html>
