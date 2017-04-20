@@ -1,193 +1,4 @@
-* {
-            margin: 0px;
-            padding: 0px;
-            font-family:  "微软雅黑";
-        }
-        
-        html, body {
-            width: 100%;
-            height: 100vh;
-            min-width: 1300px;
-            max-width: 2500px;
-        }
-         /*清除浮动*/
-        .clearboth:after {
-            content: '';
-            display: block;
-            clear: both;
-        }
-        /*范围*/
-        .range {
-            width: 80%;
-            margin: 0 auto;
-            /*border: 1px solid #fff;*/
-        }
-        /*倾斜*/
-        .skew {
-            -webkit-transform: skew(-14deg, 0deg);
-            -moz-transform: skew(-14deg, 0deg);
-            -ms-transform: skew(-14deg, 0deg);
-            -o-transform: skew(-14deg, 0deg);
-            transform: skew(-14deg, 0deg);
-        }
-        /*反倾斜*/
-        .skew-inner {
-            display: block;
-            -webkit-transform: skew(14deg, 0deg);
-            -moz-transform: skew(14deg, 0deg);
-            -ms-transform: skew(14deg, 0deg);
-            -o-transform: skew(14deg, 0deg);
-            transform: skew(14deg, 0deg);
-        }
-        li{
-            list-style-type: none;
-        }
-        a{
-            text-decoration: none;
-        }
 
-        
-        /*nav部分*/
-        nav.websiteNav{
-            width: 100%;
-            min-width: 100%;
-            position: absolute;
-             min-width: 1300px;
-            max-width: 2500px;
-            color: #fff;
-            height: 90px;
-            background-color: rgba(221, 221, 221, 0.3);
-            z-index: 0;
-        }
-        
-        nav.websiteNav:after {
-            display: block;
-            content: '';
-            height: 2px;
-            background-color: #857650;
-        }
-        /*.navbox,.logobox,.loginAndRebox,navul{
-            display: inline-block;
-            float: left;
-        }*/
-        .navsubbox{
-            position: relative;
-        }
-        .navbox{
-            width: 78%;
-            min-height: 30px;
-            float: left;
-            /*border: 1px solid #fff;*/
-
-        }
-        ul.navul li {
-            display: inline-block;
-            /*float: left;*/
-            
-        }
-        .logobox>img{
-            width: 80px;
-            position: absolute;
-
-
-        }
-        .loginAndRebox{
-            width:20%;
-            float: right;
-            position: relative;
-            
-        }
-        .logobox{
-            width: 20%;
-            position: relative;
-            min-width: 20%;
-            min-height:50px;
-            float: left;
-        }
-        .navul{
-            float: left;
-            width: 79%;
-            line-height: 80px;
-            /*border: 1px solid #fff;*/
-        }
-        .navul li{
-            float: left;
-            padding: 3px 30px;
-            font-size: 1.1em;
-            margin-left: 5px;
-            border: 1px solid rgba(0,0, 0, 0);
-
-        }
-        .navul li:hover{
-            color:  #fbd60d;
-            cursor: pointer;
-        }
-
-        .loginbox,registerbox{
-            position: relative;
-            float: left;
-            top: 50px;
-            right: -100%;
-            cursor: pointer;
-            z-index: 9999;
-            padding-bottom: 5px;
-        }
-        .navlbox{
-            position: absolute;
-            width: 150px;
-            top: 37px;
-            left: -21px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-color: rgb(220,220,220);
-            text-align: center;
-            border-radius: 1px;
-            display: none;
-            z-index: 9999;
-        }
-        .navlbox>li{
-            display: list-item;
-            padding: 5px 30px;
-            widows: 100px;
-        }
-        .navlbox>li>a{
-            color: #000;
-        }
-        .navlbox>li:nth-of-type(1){
-            background: url(logb.png)no-repeat 10px center;
-            background-size: 1em;
-            border-bottom: 1px solid #857650;
-        }
-        .navlbox>li:nth-of-type(2){
-            background: url(regb.png)no-repeat 10px center;
-            background-size: 1em;
-        }
-        .navlbox>li:nth-of-type(1):hover{
-            background:#0000fe url(logh.png)no-repeat 10px center;
-            background-size: 1em;
-            border-bottom: 1px solid #857650;
-        }
-         .navlbox>li:nth-of-type(2):hover{
-            background:#0000fe url(regh.png)no-repeat 10px center;
-            background-size: 1em;
-        }
-        .navlbox>li:hover>a{
-            color:#fff;
-        }
-        .keywords{
-            position: absolute;
-           color:  #fbd60d;
-            top: 55px;
-            width: 190px;
-            background: rgba(0,0,0,0.2) url('search.png')no-repeat 200px center;
-            background-size: 16px;
-            border: 2px solid rgba(133,118,80,0.25);
-            padding: 5px 30px 5px 5px;
-            left: -20px;
-        }
-        /*nav结束*/
-       
-        
         /*视频*/
         .videobox {
             position: relative;
@@ -244,28 +55,28 @@
             background-size:cover;*/
             overflow: hidden;
             min-height: 1000px;
+            max-height: 1000px;
             padding-bottom: 50px;
 
         }
-        .paddingbox1,.paddingbox2{
+        .paddingbox1,.paddingbox2,.paddingbox3{
             width: 100%;
             height: 50px;
-            
             position: relative;
         }
-        .paddingbox1{
+        .paddingbox1,.paddingbox3{
             background-color: #fff;
         }
         .paddingbox2{
             background-color: #000;
         }
-        .paddingbox1:after,.paddingbox2:after{
+        .paddingbox1:after,.paddingbox2:after, .paddingbox3:after{
             content: '';
             display: block;
             position: absolute;
             z-index: 0;    
         }
-        .paddingbox1:after{
+        .paddingbox1:after,.paddingbox3:after{
               border-top: 200px solid #fff;
             border-right: 2300px solid transparent;
         }
@@ -356,7 +167,7 @@
         }
         .vimgbox{
             height: 380px;
-            width: 100%;
+            width: 100%; 
             overflow: hidden;
             position: relative;
         }
@@ -403,6 +214,7 @@
             /*display: none;*/
 
         }
+       
         .videoNamebox{
             display: none;
         }
@@ -420,6 +232,46 @@
             font-size: 0.8em;
             color: #0f0f0f;
         }
+         .videoName i,.videoName c,.newVideoName j,.newVideoName c, .ScrawNameinfo p>j, .ScrawNameinfo p>c{
+            display: block;
+            float: left;
+            padding-left:18px;
+            margin-left: 5px;
+            font-size: 0.7em;
+         
+
+            
+        }
+        .videoName i{
+             background: url('messageb.png')no-repeat bottom left;
+            background-size: 16px;
+            padding-top: 8px;
+        }
+         .videoName c{
+            background: url('eyeb.png')no-repeat bottom left;
+            padding-top: 8px;
+            background-size: 16px;
+         }
+         .newVideoName j{
+            background: url('messagew.png')no-repeat center left;
+            background-size: 16px;
+            padding-top: 2px;
+         }
+         .newVideoName c{
+            background: url('eyew.png')no-repeat center left;
+            background-size: 16px;
+             padding-top: 2px;
+         }
+           .ScrawNameinfo p>j{
+            background: url('messageb.png')no-repeat center left;
+            background-size: 16px;
+            padding-top: 2px;
+         }
+         .ScrawNameinfo p>c{
+            background: url('eyeb.png')no-repeat center left;
+            background-size: 16px;
+             padding-top: 2px;
+         }
         .rankVideo{
             position: absolute;
             top: 14px;
@@ -494,12 +346,68 @@
 
     .newVideoName>span{
         font-size: 0.7em;
+        display: block;
+        float: left;
     }
+
+    /*
     
-/*
-    footer
-*/
-footer{
-    height: 500px;
-    background: #000;
-}
+        hotmain3
+    */
+
+    .newScrawlul{
+        width: 100%;
+       
+    }
+    .newScrawlul>li>a{
+        display: block;
+    }
+     .newScrawlul>li{
+         width: 18%;
+         height:350px;
+         background-color: #eaeaea;
+         border: 1px solid rgba(255,255,255,0.25);
+         float: left;
+         margin-left: 1.4%;
+         margin-top: 10px;
+         border-radius: 2px;
+         cursor: pointer;
+
+     }
+     .Simgbox{
+         width: 100%;
+         height:250px;
+         overflow: hidden;
+         text-align: center;
+         
+     }
+     .Simgbox img{
+         width: 100%;
+         height: 250px;
+     }
+     
+     .ScrawNameinfo{
+         padding:5px 10px;
+     }
+     .ScrawNameinfo .ScrawName{
+        line-height: 1.5em;
+        color: #0f0f0f;
+     }
+     .ScrawNameinfo p{
+         font-size: 0.8em;
+         line-height: 1.5em;
+         padding-bottom: 5px;
+         border-bottom: 1px solid #d0d0d0;
+         color: #0f0f0f;
+     }
+      .ScrawNameinfo p>span{
+          display: block;
+          float: left;
+          font-size: 0.8em;
+          color: #0f0f0f;
+      }
+      .Scrawauthor{
+        margin-top: 10px;
+        color: #0f0f0f;
+      }
+    
