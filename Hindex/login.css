@@ -1,0 +1,128 @@
+.loginbg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff url('loginbg06.jpg')no-repeat center center;
+    /*background: #fff url('world.png')no-repeat center center;*/
+    background-size: cover;
+    font-family: "STXingkai";
+    position: relative;
+
+}
+.loginbg::after{
+    display: block;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    left:0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 3;
+
+}
+.loginoutbox{
+    width:800px;
+    height: 500px;
+    /*border: 1px solid red;*/
+    margin: 150px auto;
+    overflow: hidden;
+    border-radius: 5px;
+    /*background-color: #fff;*/
+    box-shadow: 0px 0px 84px -11px #aaa;
+    position: relative;
+    z-index: 999999;
+}
+.loginbox{
+    width: 50%;
+    height: 100%;
+    float: right;
+    /*border: 1px solid blue;*/
+}
+.imagebox{
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: rgba(10,10,220,0.85);
+    text-align: center;
+    background: url('login05.png')no-repeat;
+    background-size: 750px; 
+    background-position: -100px 0px; 
+    position: relative;  
+    box-shadow: 0px 0px 50px 5px #aaa;
+}
+.imagebox h3{
+    color: #fff;
+    position: absolute;
+    top: 400px;
+    left:125px;
+    font-family: arial,"Hiragino Sans GB","Microsoft YaHei","微軟正黑體","儷黑 Pro",sans-serif;
+}
+.loginbox{
+    text-align: center;
+    background-color: #fff;
+
+}
+.loginbox h2{
+    color:#505050;
+    margin-top: 30px;
+    margin-bottom: 20px;    
+    font-family: arial,"Hiragino Sans GB","Microsoft YaHei","微軟正黑體","儷黑 Pro",sans-serif;
+}
+.inputbox{
+    width: 300px;
+    margin: 0px auto;
+    text-align: center;
+}
+.inputbox input[type=text]{
+    width: 100%;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    border: 1px solid #eaeaea;
+}
+#submit{
+    margin:20px auto;
+    display: block;
+    border-radius: 3px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #004fad;
+    color: #eaeaea;
+    border:none;
+    cursor: pointer;
+    
+}
+.otherway{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    cursor: pointer;
+}
+.registerbox{
+
+    width: 199px;
+    float: left;
+    border-top: 1px #eaeaea solid;
+    border-right: 1px #eaeaea solid;
+    text-align:center;
+    height: 40px;
+    line-height: 40px;
+}
+.findpwd{
+    width: 200px;
+    float: left;
+    border-top: 1px #eaeaea solid;
+    /*border-left: 1px #ddd solid;*/
+    text-align:center;    
+     height: 40px;
+    line-height: 40px;
+
+}
+.otherway a{
+    display: block;
+    color: #505050;
+}
